@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Enemy.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ButtonNormal.tres" type="StyleBox" id=2]
@@ -7,11 +7,12 @@
 [ext_resource path="res://Battle.gd" type="Script" id=5]
 [ext_resource path="res://MobileRPG Resources/PixelRPG.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://StatsPanel.gd" type="Script" id=7]
+[ext_resource path="res://AttackButton.tscn" type="PackedScene" id=8]
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 6 )
 
-[sub_resource type="StyleBoxFlat" id=1]
+[sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.184314, 0.184314, 0.184314, 1 )
 border_width_left = 5
 border_width_top = 5
@@ -24,7 +25,7 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 corner_detail = 20
 
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.713726, 0.713726, 0.713726, 1 )
 border_width_left = 5
 border_width_top = 5
@@ -76,7 +77,7 @@ margin_top = 5.0
 margin_right = 50.0
 margin_bottom = 42.0
 size_flags_horizontal = 3
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 text = "HP
 25"
 align = 1
@@ -85,22 +86,22 @@ valign = 1
 [node name="AP" type="Label" parent="Ui/StatsPanel/HBoxContainer"]
 margin_left = 54.0
 margin_top = 5.0
-margin_right = 105.0
+margin_right = 104.0
 margin_bottom = 42.0
 size_flags_horizontal = 3
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 text = "AP
 3"
 align = 1
 valign = 1
 
 [node name="MP" type="Label" parent="Ui/StatsPanel/HBoxContainer"]
-margin_left = 109.0
+margin_left = 108.0
 margin_top = 5.0
 margin_right = 160.0
 margin_bottom = 42.0
 size_flags_horizontal = 3
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 text = "MP
 10"
 align = 1
@@ -116,25 +117,17 @@ custom_constants/vseparation = 16
 custom_constants/hseparation = 16
 columns = 2
 
-[node name="Attack" type="Button" parent="Ui/GridContainer"]
-margin_right = 100.0
-margin_bottom = 32.0
-rect_min_size = Vector2( 100, 32 )
-custom_fonts/font = ExtResource( 3 )
-custom_styles/hover = SubResource( 1 )
-custom_styles/pressed = SubResource( 2 )
-custom_styles/normal = ExtResource( 2 )
-text = "Sword"
+[node name="Attack" parent="Ui/GridContainer" instance=ExtResource( 8 )]
 
 [node name="Heal" type="Button" parent="Ui/GridContainer"]
 margin_left = 116.0
 margin_right = 216.0
 margin_bottom = 32.0
 rect_min_size = Vector2( 100, 32 )
-custom_fonts/font = ExtResource( 3 )
-custom_styles/hover = SubResource( 1 )
-custom_styles/pressed = SubResource( 2 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
 custom_styles/normal = ExtResource( 2 )
+custom_fonts/font = ExtResource( 3 )
 text = "Heal"
 
 [node name="Shield" type="Button" parent="Ui/GridContainer"]
@@ -142,10 +135,10 @@ margin_top = 48.0
 margin_right = 100.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 100, 32 )
-custom_fonts/font = ExtResource( 3 )
-custom_styles/hover = SubResource( 1 )
-custom_styles/pressed = SubResource( 2 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
 custom_styles/normal = ExtResource( 2 )
+custom_fonts/font = ExtResource( 3 )
 text = "Shield"
 
 [node name="Run" type="Button" parent="Ui/GridContainer"]
@@ -154,15 +147,13 @@ margin_top = 48.0
 margin_right = 216.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 100, 32 )
-custom_fonts/font = ExtResource( 3 )
-custom_styles/hover = SubResource( 1 )
-custom_styles/pressed = SubResource( 2 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
 custom_styles/normal = ExtResource( 2 )
+custom_fonts/font = ExtResource( 3 )
 text = "Run"
-
 [connection signal="ap_changed" from="PlayerStats" to="Ui/StatsPanel" method="_on_PlayerStats_ap_changed"]
 [connection signal="hp_changed" from="PlayerStats" to="Ui/StatsPanel" method="_on_PlayerStats_hp_changed"]
 [connection signal="mp_changed" from="PlayerStats" to="Ui/StatsPanel" method="_on_PlayerStats_mp_changed"]
 [connection signal="enemy_died" from="Enemy" to="." method="_on_Enemy_enemy_died"]
-[connection signal="pressed" from="Ui/GridContainer/Attack" to="." method="_on_Attack_pressed"]
 [connection signal="pressed" from="Ui/GridContainer/Heal" to="." method="_on_Heal_pressed"]
