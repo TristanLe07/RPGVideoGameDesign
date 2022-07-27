@@ -24,7 +24,3 @@ func start_player_turn():
 func _on_Enemy_enemy_died():
 	battleActionButtons.hide()
 	enemy = null
-
-
-func _on_Heal_pressed():
-	pass # Replace with function body.

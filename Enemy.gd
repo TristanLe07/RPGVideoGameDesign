@@ -23,7 +23,11 @@ func attack(target) -> void:
 	emit_signal("end_turn")
 
 func deal_damage():
-	print("dealt damage")
+	var main = get_tree().current_scene
+	var playerStats = main.find_node("PlayerStats")
+	if playerStats != null:
+		playerStats.take_damage(4)
+
 
 func take_damage(amount):
 	self.hp -= amount
