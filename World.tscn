@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=2]
+[gd_scene load_steps=58 format=2]
 
 [ext_resource path="res://Action RPG Resources/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Action RPG Resources/World/Bush.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Action RPG Resources/World/CliffTileset.png" type="Texture" id=5]
 [ext_resource path="res://Action RPG Resources/World/Tree.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Menus/PauseController.tscn" type="PackedScene" id=7]
+[ext_resource path="res://MobileControls.tscn" type="PackedScene" id=8]
 
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
@@ -506,6 +507,43 @@ tile_data = PoolIntArray( -327686, 0, 0, -327685, 0, 1, -327684, 0, 1, -327683, 
 
 [node name="YSort" type="YSort" parent="."]
 
+[node name="Bush" type="YSort" parent="YSort"]
+
+[node name="Bush" parent="YSort/Bush" instance=ExtResource( 2 )]
+position = Vector2( -48, -48 )
+
+[node name="Bush3" parent="YSort/Bush" instance=ExtResource( 2 )]
+position = Vector2( 48, 48 )
+
+[node name="Bush4" parent="YSort/Bush" instance=ExtResource( 2 )]
+position = Vector2( -48, 48 )
+
+[node name="Bush5" parent="YSort/Bush" instance=ExtResource( 2 )]
+position = Vector2( 48, -48 )
+
+[node name="Tree" type="YSort" parent="YSort"]
+
+[node name="Tree" parent="YSort/Tree" instance=ExtResource( 6 )]
+position = Vector2( 96, -40 )
+
+[node name="Tree2" parent="YSort/Tree" instance=ExtResource( 6 )]
+position = Vector2( 128, -40 )
+
+[node name="Tree3" parent="YSort/Tree" instance=ExtResource( 6 )]
+position = Vector2( 160, -40 )
+
+[node name="Tree4" parent="YSort/Tree" instance=ExtResource( 6 )]
+position = Vector2( -96, -40 )
+
+[node name="Tree5" parent="YSort/Tree" instance=ExtResource( 6 )]
+position = Vector2( -128, -40 )
+
+[node name="Tree6" parent="YSort/Tree" instance=ExtResource( 6 )]
+position = Vector2( -160, -40 )
+
+[node name="Tree7" parent="YSort/Tree" instance=ExtResource( 6 )]
+position = Vector2( 96, 96 )
+
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 0, 0 )
 
@@ -517,39 +555,12 @@ editor_draw_drag_margin = true
 
 [node name="PauseController" parent="YSort/Player/Camera2D" instance=ExtResource( 7 )]
 margin_left = -128.066
-margin_top = -71.7998
+margin_top = -75.7998
 margin_right = -128.066
-margin_bottom = -71.7998
+margin_bottom = -75.7998
 
-[node name="Bush" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( -48, -48 )
-
-[node name="Bush3" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 48, 48 )
-
-[node name="Bush4" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( -48, 48 )
-
-[node name="Bush5" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 48, -48 )
-
-[node name="Tree" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( 96, -40 )
-
-[node name="Tree2" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( 128, -40 )
-
-[node name="Tree3" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( 160, -40 )
-
-[node name="Tree4" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( -96, -40 )
-
-[node name="Tree5" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( -128, -40 )
-
-[node name="Tree6" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( -160, -40 )
-
-[node name="Tree7" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( 96, 96 )
+[node name="MobileControls" parent="YSort/Player/Camera2D" instance=ExtResource( 8 )]
+margin_left = -128.066
+margin_top = -75.7998
+margin_right = -128.066
+margin_bottom = -75.7998

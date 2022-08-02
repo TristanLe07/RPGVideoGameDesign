@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/HeartUIFull.png-f990162cdf446293c75f922ccc4b0abf.stex"
+path="res://.import/02896153b5e88516af6cb8e444842317.png-581264ba3df23d7644af38989a7d96c9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Action RPG Resources/UI/HeartUIFull.png"
-dest_files=[ "res://.import/HeartUIFull.png-f990162cdf446293c75f922ccc4b0abf.stex" ]
+source_file="res://Action RPG Resources/Player/02896153b5e88516af6cb8e444842317.png"
+dest_files=[ "res://.import/02896153b5e88516af6cb8e444842317.png-581264ba3df23d7644af38989a7d96c9.stex" ]
 
 [params]
 
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://MobileRPG Resources/PixelRPG.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Menus/MainMenu.gd" type="Script" id=2]
 [ext_resource path="res://ButtonNormal.tres" type="StyleBox" id=3]
+[ext_resource path="res://Action RPG Resources/UI/thumb-1920-613933.jpg" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
-size = 24
+size = 30
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
@@ -19,12 +20,18 @@ font_data = ExtResource( 1 )
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_bottom = 2.0
 script = ExtResource( 2 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 256.0
 margin_bottom = 152.0
 color = Color( 0.384314, 1, 0, 1 )
+
+[node name="Thumb-1920-613933" type="Sprite" parent="."]
+position = Vector2( 128, 76 )
+scale = Vector2( 0.133333, 0.140871 )
+texture = ExtResource( 4 )
 
 [node name="Label" type="Label" parent="."]
 anchor_left = 0.5
@@ -63,6 +70,8 @@ text = "Battle Simulation"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="BattleSimulationButton" to="." method="_on_BattleSimulationButton_pressed"]
