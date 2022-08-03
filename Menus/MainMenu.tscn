@@ -22,13 +22,16 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_bottom = 2.0
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 256.0
 margin_bottom = 152.0
 color = Color( 0.384314, 1, 0, 1 )
 
-[node name="Thumb-1920-613933" type="Sprite" parent="."]
+[node name="Background" type="Sprite" parent="."]
 position = Vector2( 128, 76 )
 scale = Vector2( 0.133333, 0.140871 )
 texture = ExtResource( 4 )
@@ -51,10 +54,10 @@ margin_left = 56.0
 margin_top = 72.0
 margin_right = 200.0
 margin_bottom = 96.0
-custom_fonts/font = SubResource( 2 )
 custom_styles/hover = ExtResource( 3 )
 custom_styles/pressed = ExtResource( 3 )
 custom_styles/normal = ExtResource( 3 )
+custom_fonts/font = SubResource( 2 )
 text = "PLAY"
 
 [node name="BattleSimulationButton" type="Button" parent="."]
@@ -62,16 +65,15 @@ margin_left = 56.0
 margin_top = 104.0
 margin_right = 200.0
 margin_bottom = 128.0
-custom_fonts/font = SubResource( 3 )
 custom_styles/hover = ExtResource( 3 )
 custom_styles/pressed = ExtResource( 3 )
 custom_styles/normal = ExtResource( 3 )
+custom_fonts/font = SubResource( 3 )
 text = "Battle Simulation"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-
 [connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="BattleSimulationButton" to="." method="_on_BattleSimulationButton_pressed"]

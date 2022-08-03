@@ -30,6 +30,7 @@ func take_damage(amount):
 	if is_dead():
 		emit_signal("enemy_died")
 		queue_free()
+		get_tree().change_scene("res://Menus/BattleSimulationEnd.tscn")
 	else:
 		animationPlayer.play("Shake")
 	
