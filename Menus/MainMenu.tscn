@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://MobileRPG Resources/PixelRPG.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Menus/MainMenu.gd" type="Script" id=2]
 [ext_resource path="res://ButtonNormal.tres" type="StyleBox" id=3]
 [ext_resource path="res://Action RPG Resources/UI/thumb-1920-613933.jpg" type="Texture" id=4]
+[ext_resource path="res://Audios/MainMenuMusic.wav" type="AudioStream" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
@@ -22,9 +23,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_bottom = 2.0
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 256.0
@@ -54,10 +52,10 @@ margin_left = 56.0
 margin_top = 72.0
 margin_right = 200.0
 margin_bottom = 96.0
+custom_fonts/font = SubResource( 2 )
 custom_styles/hover = ExtResource( 3 )
 custom_styles/pressed = ExtResource( 3 )
 custom_styles/normal = ExtResource( 3 )
-custom_fonts/font = SubResource( 2 )
 text = "PLAY"
 
 [node name="BattleSimulationButton" type="Button" parent="."]
@@ -65,15 +63,18 @@ margin_left = 56.0
 margin_top = 104.0
 margin_right = 200.0
 margin_bottom = 128.0
+custom_fonts/font = SubResource( 3 )
 custom_styles/hover = ExtResource( 3 )
 custom_styles/pressed = ExtResource( 3 )
 custom_styles/normal = ExtResource( 3 )
-custom_fonts/font = SubResource( 3 )
 text = "Battle Simulation"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true
+
 [connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="BattleSimulationButton" to="." method="_on_BattleSimulationButton_pressed"]

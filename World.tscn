@@ -189,10 +189,10 @@ margin_top = 16.0
 margin_right = 60.0
 margin_bottom = 36.0
 rect_min_size = Vector2( 60, 20 )
+custom_fonts/font = SubResource( 51 )
 custom_styles/hover = ExtResource( 8 )
 custom_styles/pressed = ExtResource( 8 )
 custom_styles/normal = ExtResource( 8 )
-custom_fonts/font = SubResource( 51 )
 text = "Resume"
 
 [node name="QuitBtn" type="Button" parent="CanvasLayer/PauseController/CenterContainer/VBoxContainer"]
@@ -200,10 +200,11 @@ margin_top = 40.0
 margin_right = 60.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 60, 20 )
+custom_fonts/font = SubResource( 51 )
 custom_styles/hover = ExtResource( 8 )
 custom_styles/pressed = ExtResource( 8 )
 custom_styles/normal = ExtResource( 8 )
-custom_fonts/font = SubResource( 51 )
 text = "Quit"
+
 [connection signal="pressed" from="CanvasLayer/PauseController/CenterContainer/VBoxContainer/ResumeBtn" to="CanvasLayer/PauseController" method="_on_Button_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseController/CenterContainer/VBoxContainer/QuitBtn" to="CanvasLayer/PauseController" method="_on_Button2_pressed"]
