@@ -14,7 +14,6 @@ font_data = ExtResource( 2 )
 
 [node name="PauseController" type="Control"]
 pause_mode = 2
-visible = false
 script = ExtResource( 1 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
