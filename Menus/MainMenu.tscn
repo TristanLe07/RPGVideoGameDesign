@@ -26,12 +26,12 @@ script = ExtResource( 2 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 256.0
-margin_bottom = 152.0
+margin_bottom = 150.0
 color = Color( 0.384314, 1, 0, 1 )
 
 [node name="Background" type="Sprite" parent="."]
-position = Vector2( 128, 76 )
-scale = Vector2( 0.133333, 0.140871 )
+position = Vector2( 128, 75 )
+scale = Vector2( 0.133333, 0.139018 )
 texture = ExtResource( 4 )
 
 [node name="Label" type="Label" parent="."]

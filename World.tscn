@@ -29,7 +29,7 @@ font_data = ExtResource( 7 )
 scale = Vector2( 1.09091, 1.14286 )
 texture = ExtResource( 3 )
 region_enabled = true
-region_rect = Rect2( 0, 0, 1840, 1760 )
+region_rect = Rect2( 0, 0, 1836.45, 1752.91 )
 
 [node name="DirtPath" type="TileMap" parent="."]
 scale = Vector2( 1, 1.00038 )
