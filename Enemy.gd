@@ -2,7 +2,7 @@ extends Node2D
 
 const BattleUnits = preload("res://BattleUnits.tres")
 
-var hp = 25 setget set_hp
+var hp = 75 setget set_hp
 var target = null
 
 onready var timer = $Timer
@@ -23,7 +23,7 @@ func attack() -> void:
 	emit_signal("end_turn")
 
 func deal_damage():
-	BattleUnits.PlayerStats.hp -= 4
+	BattleUnits.PlayerStats.hp -= 7
 
 func take_damage(amount):
 	self.hp -= amount

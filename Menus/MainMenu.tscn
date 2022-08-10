@@ -22,7 +22,11 @@ font_data = ExtResource( 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_bottom = 2.0
+rect_scale = Vector2( 0.997343, 1 )
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 256.0
@@ -52,10 +56,10 @@ margin_left = 56.0
 margin_top = 72.0
 margin_right = 200.0
 margin_bottom = 96.0
-custom_fonts/font = SubResource( 2 )
 custom_styles/hover = ExtResource( 3 )
 custom_styles/pressed = ExtResource( 3 )
 custom_styles/normal = ExtResource( 3 )
+custom_fonts/font = SubResource( 2 )
 text = "PLAY"
 
 [node name="BattleSimulationButton" type="Button" parent="."]
@@ -63,10 +67,10 @@ margin_left = 56.0
 margin_top = 104.0
 margin_right = 200.0
 margin_bottom = 128.0
-custom_fonts/font = SubResource( 3 )
 custom_styles/hover = ExtResource( 3 )
 custom_styles/pressed = ExtResource( 3 )
 custom_styles/normal = ExtResource( 3 )
+custom_fonts/font = SubResource( 3 )
 text = "Battle Simulation"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -75,6 +79,5 @@ __meta__ = {
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
 autoplay = true
-
 [connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="BattleSimulationButton" to="." method="_on_BattleSimulationButton_pressed"]

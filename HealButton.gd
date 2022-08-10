@@ -5,6 +5,6 @@ func _on_pressed():
 	var playerStats = BattleUnits.PlayerStats
 	if playerStats != null:
 		if playerStats.mp >= 8:
-			playerStats.hp += 5
+			playerStats.hp += 8
 			playerStats.mp -= 8
 			playerStats.ap -= 1

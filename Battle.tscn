@@ -11,14 +11,15 @@
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 1 )
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
+anti_aliasing = false
 
 [sub_resource type="DynamicFont" id=2]
 size = 12
@@ -35,10 +36,13 @@ font_data = ExtResource( 6 )
 [node name="Battle" type="Node"]
 script = ExtResource( 5 )
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorBackground" type="ColorRect" parent="."]
 margin_right = 256.0
 margin_bottom = 152.0
 color = Color( 0.313726, 1, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="PlayerStats" type="Node" parent="."]
 script = ExtResource( 4 )
@@ -56,30 +60,42 @@ position = Vector2( 192, 48 )
 [node name="Ui" type="Control" parent="."]
 margin_right = 24.0
 margin_bottom = 24.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Panel" type="Panel" parent="Ui"]
 margin_left = 8.0
-margin_top = 96.0
+margin_top = 104.0
 margin_right = 96.0
-margin_bottom = 144.0
+margin_bottom = 141.0
 custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="StatsPanel" type="Panel" parent="Ui"]
 margin_left = 8.0
 margin_top = 8.0
-margin_right = 88.0
+margin_right = 96.0
 margin_bottom = 48.0
 custom_styles/panel = ExtResource( 2 )
 script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Ui/StatsPanel"]
 margin_left = 8.0
 margin_top = 8.0
-margin_right = 72.0
+margin_right = 80.0
 margin_bottom = 35.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="HP" type="Label" parent="Ui/StatsPanel/HBoxContainer"]
-margin_right = 20.0
+margin_right = 21.0
 margin_bottom = 27.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 2 )
@@ -89,8 +105,8 @@ align = 1
 valign = 1
 
 [node name="AP" type="Label" parent="Ui/StatsPanel/HBoxContainer"]
-margin_left = 24.0
-margin_right = 40.0
+margin_left = 25.0
+margin_right = 46.0
 margin_bottom = 27.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 2 )
@@ -100,8 +116,8 @@ align = 1
 valign = 1
 
 [node name="MP" type="Label" parent="Ui/StatsPanel/HBoxContainer"]
-margin_left = 44.0
-margin_right = 64.0
+margin_left = 50.0
+margin_right = 72.0
 margin_bottom = 27.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 2 )
@@ -113,12 +129,15 @@ valign = 1
 [node name="GridContainer" type="GridContainer" parent="Ui"]
 anchor_right = 0.529
 margin_left = 16.0
-margin_top = 104.0
-margin_right = 83.304
-margin_bottom = 144.0
+margin_top = 112.0
+margin_right = 75.304
+margin_bottom = 136.0
 custom_constants/vseparation = 11
 custom_constants/hseparation = 12
 columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Attack" parent="Ui/GridContainer" instance=ExtResource( 8 )]
 margin_right = 30.0
@@ -132,7 +151,6 @@ margin_right = 72.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 30, 20 )
 custom_fonts/font = SubResource( 4 )
-
 [connection signal="ap_changed" from="PlayerStats" to="Ui/StatsPanel" method="_on_PlayerStats_ap_changed"]
 [connection signal="hp_changed" from="PlayerStats" to="Ui/StatsPanel" method="_on_PlayerStats_hp_changed"]
 [connection signal="mp_changed" from="PlayerStats" to="Ui/StatsPanel" method="_on_PlayerStats_mp_changed"]
