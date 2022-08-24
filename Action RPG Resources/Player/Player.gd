@@ -41,5 +41,5 @@ func move_state(delta):
 		
 	velocity = move_and_slide(velocity)
 
-# SAVE SYSTEM FOR GAME
+
 

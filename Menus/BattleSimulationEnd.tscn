@@ -29,26 +29,28 @@ color = Color( 1, 0.984314, 0, 1 )
 margin_right = 256.0
 margin_bottom = 96.0
 custom_fonts/font = SubResource( 1 )
-text = "Congratulations!
-You have killed 
-the Enemy!"
+text = "Congratulations! You have killed the Enemy!"
 align = 1
 valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+autowrap = true
 
 [node name="ReturnMainMenuBtn" type="Button" parent="ColorRect/Label"]
 margin_left = 64.0
 margin_top = 104.0
 margin_right = 192.0
 margin_bottom = 127.0
+custom_fonts/font = SubResource( 2 )
 custom_styles/hover = ExtResource( 2 )
 custom_styles/pressed = ExtResource( 2 )
 custom_styles/normal = ExtResource( 2 )
-custom_fonts/font = SubResource( 2 )
 text = "Main Menu"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 128, 76 )
+current = true
+zoom = Vector2( 0.25, 0.25 )
+
 [connection signal="pressed" from="ColorRect/Label/ReturnMainMenuBtn" to="." method="_on_ReturnMainMenuBtn_pressed"]

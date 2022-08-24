@@ -1,11 +1,11 @@
 [gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Action RPG Resources/Player/Player.gd" type="Script" id=1]
-[ext_resource path="res://Action RPG Resources/Player/02896153b5e88516af6cb8e444842317.png" type="Texture" id=2]
+[ext_resource path="res://Action RPG Resources/Player/Player.png" type="Texture" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 2.99999
-height = 4.00002
+height = 10.0
 
 [sub_resource type="Animation" id=2]
 resource_name = "IdleDown"
@@ -114,7 +114,7 @@ tracks/2/keys = {
 "values": [ 0.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("../Camera2D:position")
+tracks/3/path = NodePath("CollisionShape2D:rotation_degrees")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -123,39 +123,15 @@ tracks/3/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0, 169 ) ]
+"values": [ -89.9996 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("../Camera2D:rotation_degrees")
+tracks/4/path = NodePath("CollisionShape2D:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("CollisionShape2D:rotation_degrees")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ -89.9996 ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("CollisionShape2D:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
@@ -305,12 +281,12 @@ script = ExtResource( 1 )
 position = Vector2( -2.20229e-23, -7 )
 scale = Vector2( 0.625, 0.625 )
 texture = ExtResource( 2 )
-vframes = 4
 hframes = 4
+vframes = 4
 frame = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 7.49586 )
+position = Vector2( 0, 9 )
 rotation = -1.57079
 shape = SubResource( 1 )
 

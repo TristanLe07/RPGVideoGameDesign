@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ButtonNormal.tres" type="StyleBox" id=1]
+[ext_resource path="res://InGameBattle/ActionButton.gd" type="Script" id=2]
+
+[node name="ActionButton" type="Button"]
+margin_right = 104.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 104, 40 )
+custom_styles/hover = ExtResource( 1 )
+custom_styles/pressed = ExtResource( 1 )
+custom_styles/normal = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

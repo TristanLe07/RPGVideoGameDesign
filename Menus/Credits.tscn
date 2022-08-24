@@ -1,13 +1,24 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://MobileRPG Resources/PixelRPG.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Menus/Credits.gd" type="Script" id=2]
-[ext_resource path="res://PixelFont.tres" type="DynamicFont" id=3]
 [ext_resource path="res://ButtonNormal.tres" type="StyleBox" id=4]
 
-[sub_resource type="DynamicFont" id=1]
-size = 12
+[sub_resource type="DynamicFont" id=2]
+size = 24
 font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 6
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://MobileRPG Resources/PixelRPG.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 6
+font_data = SubResource( 3 )
 
 [node name="Credits" type="Control"]
 anchor_right = 1.0
@@ -16,104 +27,40 @@ script = ExtResource( 2 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 256.0
-margin_bottom = 152.0
+margin_bottom = 150.0
 color = Color( 0.266667, 1, 0, 1 )
 
-[node name="ScrollContainer" type="ScrollContainer" parent="."]
-margin_top = 4.0
+[node name="HelloPlayer" type="Label" parent="."]
 margin_right = 256.0
-margin_bottom = 148.0
-follow_focus = true
-
-[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
-margin_right = 255.0
-margin_bottom = 975.0
-
-[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer"]
-margin_right = 255.0
-margin_bottom = 957.0
+margin_bottom = 40.0
 rect_min_size = Vector2( 255, 24 )
-custom_fonts/font = SubResource( 1 )
-text = "Thank you for playing!
-Today's video is
-sponsored by Raid
-Shadow Legends, 
-one of the biggest 
-mobile role-playing 
-games of 2019 and 
-it's totally free! 
-Currently almost 
-10 million users
- have joined Raid 
-over the last six 
-months, and it's 
-one of the most
- impressive games
- in its class with
- detailed models,
- environments and
- smooth 60 frames
- per second
- animations! All the
- champions in the
- game can be 
-customized with 
-unique gear that 
-changes your 
-strategic  buffs 
-and abilities! 
-The dungeon bosses 
-have some ridiculous
-skills of their own and 
-figuring out the perfect 
-party and strategy to 
-overtake them's a lot of 
-fun! Currently with over 
-300,000 reviews, Raid has 
-almost a perfect score on 
-the Play Store! The 
-community is growing 
-fast and the highly 
-anticipated new faction 
-wars feature is now live, 
-you might even find my 
-squad out there in the 
-arena! It's easier to start 
-now than ever with rates 
-program for new players 
-you get a new daily login 
-reward for the first 90 
-days that you play in the 
-game! So what are you 
-waiting for? Go to the v
-ideo description, click on t
-he special links and you'll 
-get 50,000 silver and a 
-free epic champion as 
-part of the new player 
-program to start your 
-journey! 
-Good luck and I'll see you 
-there!
-
-
-"
+custom_fonts/font = SubResource( 2 )
+text = "Hello, Player."
 align = 1
 valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer"]
+[node name="Text" type="Label" parent="."]
+margin_right = 255.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 255, 24 )
+custom_fonts/font = SubResource( 1 )
+text = "This game was created for 9.1 Video Game Design Class. There's many features that I would of wished to added but was unfortunately unable to forfill those features. The game is not what I wished to be the finished product and submit, but it was something that I had to upload. I hope you enjoy this miniture unfinished game.
+
+- Tristan"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Button" type="Button" parent="."]
 margin_left = 64.0
-margin_top = 961.0
+margin_top = 112.0
 margin_right = 192.0
-margin_bottom = 975.0
+margin_bottom = 136.0
 rect_min_size = Vector2( 128, 14 )
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = SubResource( 4 )
 custom_styles/hover = ExtResource( 4 )
 custom_styles/pressed = ExtResource( 4 )
 custom_styles/normal = ExtResource( 4 )
-text = "main menu"
+text = "Main Menu"
 
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

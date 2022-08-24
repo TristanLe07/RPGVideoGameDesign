@@ -1,83 +1,249 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://MobileRPG Resources/PixelRPG.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Menus/MainMenu.gd" type="Script" id=2]
-[ext_resource path="res://ButtonNormal.tres" type="StyleBox" id=3]
-[ext_resource path="res://Action RPG Resources/UI/thumb-1920-613933.jpg" type="Texture" id=4]
+[ext_resource path="res://Action RPG Resources/UI/thumb-1920-613933.jpg" type="Texture" id=3]
 [ext_resource path="res://Audios/MainMenuMusic.wav" type="AudioStream" id=5]
 
 [sub_resource type="DynamicFont" id=1]
-size = 30
+size = 108
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 12
+size = 48
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=3]
-size = 12
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 20
+anti_aliasing = false
+anti_aliasing_size = 0.01
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 20
+anti_aliasing = false
+anti_aliasing_size = 0.01
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 20
+anti_aliasing = false
+anti_aliasing_size = 0.01
+
+[sub_resource type="DynamicFont" id=4]
+size = 48
 font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 20
+anti_aliasing = false
+anti_aliasing_size = 0.01
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 20
+anti_aliasing = false
+anti_aliasing_size = 0.01
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 20
+anti_aliasing = false
+anti_aliasing_size = 0.01
+
+[sub_resource type="DynamicFont" id=3]
+size = 48
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 20
+anti_aliasing = false
+anti_aliasing_size = 0.01
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 20
+anti_aliasing = false
+anti_aliasing_size = 0.01
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 20
+anti_aliasing = false
+anti_aliasing_size = 0.01
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_bottom = 2.0
+margin_right = -763.0
+margin_bottom = -448.0
 rect_scale = Vector2( 0.997343, 1 )
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 256.0
-margin_bottom = 150.0
-color = Color( 0.384314, 1, 0, 1 )
 
 [node name="Background" type="Sprite" parent="."]
-position = Vector2( 128, 75 )
-scale = Vector2( 0.133333, 0.139018 )
-texture = ExtResource( 4 )
+position = Vector2( 513.364, 300 )
+scale = Vector2( 0.534754, 0.55607 )
+texture = ExtResource( 3 )
 
 [node name="Label" type="Label" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -128.0
-margin_top = 1.0
-margin_right = 128.0
-margin_bottom = 72.0
+margin_left = 128.341
+margin_top = 48.0
+margin_right = 898.341
+margin_bottom = 304.0
 custom_fonts/font = SubResource( 1 )
 text = "Pokemon:
 The Game"
 align = 1
-valign = 1
-
-[node name="PlayButton" type="Button" parent="."]
-margin_left = 56.0
-margin_top = 72.0
-margin_right = 200.0
-margin_bottom = 96.0
-custom_styles/hover = ExtResource( 3 )
-custom_styles/pressed = ExtResource( 3 )
-custom_styles/normal = ExtResource( 3 )
-custom_fonts/font = SubResource( 2 )
-text = "PLAY"
-
-[node name="BattleSimulationButton" type="Button" parent="."]
-margin_left = 56.0
-margin_top = 104.0
-margin_right = 200.0
-margin_bottom = 128.0
-custom_styles/hover = ExtResource( 3 )
-custom_styles/pressed = ExtResource( 3 )
-custom_styles/normal = ExtResource( 3 )
-custom_fonts/font = SubResource( 3 )
-text = "Battle Simulation"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
 autoplay = true
-[connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
-[connection signal="pressed" from="BattleSimulationButton" to="." method="_on_BattleSimulationButton_pressed"]
+bus = "Music"
+
+[node name="Buttons" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="PlayButton" type="Button" parent="Buttons"]
+margin_left = 193.0
+margin_top = 312.0
+margin_right = 835.0
+margin_bottom = 392.0
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 5 )
+custom_styles/pressed = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+text = "PLAY"
+
+[node name="OptionsBtn" type="Button" parent="Buttons"]
+margin_left = 192.512
+margin_top = 408.0
+margin_right = 834.511
+margin_bottom = 488.0
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 5 )
+custom_styles/pressed = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+text = "OPTIONS"
+
+[node name="CreditsButton" type="Button" parent="Buttons"]
+margin_left = 898.0
+margin_top = 64.0
+margin_right = 962.0
+margin_bottom = 128.0
+custom_fonts/font = SubResource( 4 )
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/normal = SubResource( 10 )
+text = "I"
+icon_align = 1
+
+[node name="BattleSimulationButton" type="Button" parent="Buttons"]
+margin_left = 192.512
+margin_top = 504.0
+margin_right = 834.512
+margin_bottom = 584.0
+custom_fonts/font = SubResource( 3 )
+custom_styles/hover = SubResource( 11 )
+custom_styles/pressed = SubResource( 12 )
+custom_styles/normal = SubResource( 13 )
+text = "Battle Simulation"
+icon_align = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 513.364, 300 )
+current = true
+zoom = Vector2( 4, 4 )
+
+[connection signal="pressed" from="Buttons/PlayButton" to="." method="_on_PlayButton_pressed"]
+[connection signal="pressed" from="Buttons/OptionsBtn" to="." method="_on_OptionsBtn_pressed"]
+[connection signal="pressed" from="Buttons/CreditsButton" to="." method="_on_CreditsButton_pressed"]
+[connection signal="pressed" from="Buttons/BattleSimulationButton" to="." method="_on_BattleSimulationButton_pressed"]

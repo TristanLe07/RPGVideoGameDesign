@@ -2,7 +2,7 @@ extends Node2D
 
 const BattleUnits = preload("res://BattleUnits.tres")
 
-var hp = 75 setget set_hp
+var hp = 5 setget set_hp
 var target = null
 
 onready var timer = $Timer
@@ -30,7 +30,7 @@ func take_damage(amount):
 	if is_dead():
 		emit_signal("enemy_died")
 		queue_free()
-		get_tree().change_scene("res://Menus/BattleSimulationEnd.tscn")
+		get_tree().change_scene("res://InGameBattle/InGameBattleWin.tscn")
 	else:
 		animationPlayer.play("Shake")
 	
