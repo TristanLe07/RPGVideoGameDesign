@@ -175,9 +175,9 @@ texture = ExtResource( 3 )
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = 128.341
-margin_top = 48.0
+margin_top = 16.0
 margin_right = 898.341
-margin_bottom = 304.0
+margin_bottom = 272.0
 custom_fonts/font = SubResource( 1 )
 text = "Pokemon:
 The Game"
@@ -193,10 +193,10 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="PlayButton" type="Button" parent="Buttons"]
-margin_left = 193.0
-margin_top = 312.0
-margin_right = 835.0
-margin_bottom = 392.0
+margin_left = 192.512
+margin_top = 224.0
+margin_right = 834.511
+margin_bottom = 304.0
 custom_fonts/font = SubResource( 2 )
 custom_styles/hover = SubResource( 5 )
 custom_styles/pressed = SubResource( 6 )
@@ -205,9 +205,9 @@ text = "PLAY"
 
 [node name="OptionsBtn" type="Button" parent="Buttons"]
 margin_left = 192.512
-margin_top = 408.0
+margin_top = 320.0
 margin_right = 834.511
-margin_bottom = 488.0
+margin_bottom = 400.0
 custom_fonts/font = SubResource( 2 )
 custom_styles/hover = SubResource( 5 )
 custom_styles/pressed = SubResource( 6 )
@@ -228,14 +228,26 @@ icon_align = 1
 
 [node name="BattleSimulationButton" type="Button" parent="Buttons"]
 margin_left = 192.512
-margin_top = 504.0
-margin_right = 834.512
-margin_bottom = 584.0
+margin_top = 512.0
+margin_right = 834.511
+margin_bottom = 592.0
 custom_fonts/font = SubResource( 3 )
 custom_styles/hover = SubResource( 11 )
 custom_styles/pressed = SubResource( 12 )
 custom_styles/normal = SubResource( 13 )
 text = "Battle Simulation"
+icon_align = 1
+
+[node name="ControlsBtn" type="Button" parent="Buttons"]
+margin_left = 192.512
+margin_top = 416.0
+margin_right = 833.512
+margin_bottom = 496.0
+custom_fonts/font = SubResource( 3 )
+custom_styles/hover = SubResource( 11 )
+custom_styles/pressed = SubResource( 12 )
+custom_styles/normal = SubResource( 13 )
+text = "CONTROLS"
 icon_align = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -247,3 +259,4 @@ zoom = Vector2( 4, 4 )
 [connection signal="pressed" from="Buttons/OptionsBtn" to="." method="_on_OptionsBtn_pressed"]
 [connection signal="pressed" from="Buttons/CreditsButton" to="." method="_on_CreditsButton_pressed"]
 [connection signal="pressed" from="Buttons/BattleSimulationButton" to="." method="_on_BattleSimulationButton_pressed"]
+[connection signal="pressed" from="Buttons/ControlsBtn" to="." method="_on_ControlsBtn_pressed"]

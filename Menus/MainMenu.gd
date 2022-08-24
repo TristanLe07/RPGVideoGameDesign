@@ -30,3 +30,7 @@ func _on_CreditsButton_pressed():
 
 func _on_OptionsBtn_pressed():
 	get_tree().change_scene("res://Menus/AudioSettings.tscn")
+
+
+func _on_ControlsBtn_pressed():
+	get_tree().change_scene("res://Menus/Controls.tscn")

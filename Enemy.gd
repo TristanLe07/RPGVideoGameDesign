@@ -2,7 +2,7 @@ extends Node2D
 
 const BattleUnits = preload("res://BattleUnits.tres")
 
-var hp = 5 setget set_hp
+var hp = 50 setget set_hp
 var target = null
 
 onready var timer = $Timer

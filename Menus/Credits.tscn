@@ -5,7 +5,7 @@
 [ext_resource path="res://ButtonNormal.tres" type="StyleBox" id=4]
 
 [sub_resource type="DynamicFont" id=2]
-size = 24
+size = 18
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=1]
@@ -32,7 +32,7 @@ color = Color( 0.266667, 1, 0, 1 )
 
 [node name="HelloPlayer" type="Label" parent="."]
 margin_right = 256.0
-margin_bottom = 40.0
+margin_bottom = 32.0
 rect_min_size = Vector2( 255, 24 )
 custom_fonts/font = SubResource( 2 )
 text = "Hello, Player."
@@ -44,7 +44,8 @@ margin_right = 255.0
 margin_bottom = 150.0
 rect_min_size = Vector2( 255, 24 )
 custom_fonts/font = SubResource( 1 )
-text = "This game was created for 9.1 Video Game Design Class. There's many features that I would of wished to added but was unfortunately unable to forfill those features. The game is not what I wished to be the finished product and submit, but it was something that I had to upload. I hope you enjoy this miniture unfinished game.
+text = "This game was created for 9.1 Video Game Design Class. There's many features that I would of wished to added but was unfortunately unable to forfill those features. The game is not what I wished to be the finished product and submit, but it was something that I had to upload. I hope you enjoy this miniture unfinished game. But do not fear, the game will be updated on my github
+(https://github.com/TristanLe07)
 
 - Tristan"
 align = 1
@@ -53,9 +54,9 @@ autowrap = true
 
 [node name="Button" type="Button" parent="."]
 margin_left = 64.0
-margin_top = 112.0
+margin_top = 120.0
 margin_right = 192.0
-margin_bottom = 136.0
+margin_bottom = 144.0
 rect_min_size = Vector2( 128, 14 )
 custom_fonts/font = SubResource( 4 )
 custom_styles/hover = ExtResource( 4 )
