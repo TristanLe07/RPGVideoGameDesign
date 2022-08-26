@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Menus/Controls.gd" type="Script" id=1]
 [ext_resource path="res://ButtonNormal.tres" type="StyleBox" id=2]
+[ext_resource path="res://Action RPG Resources/DiscordRPC/MainMenu/MainMenu.tscn" type="PackedScene" id=3]
 
 [sub_resource type="DynamicFontData" id=3]
 font_path = "res://MobileRPG Resources/PixelRPG.ttf"
@@ -172,5 +173,8 @@ custom_styles/hover = ExtResource( 2 )
 custom_styles/pressed = ExtResource( 2 )
 custom_styles/normal = ExtResource( 2 )
 text = "X"
+
+[node name="Node2D" parent="." instance=ExtResource( 3 )]
+position = Vector2( 144, 136 )
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

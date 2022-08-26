@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://AudioSettings.gd" type="Script" id=1]
 [ext_resource path="res://Action RPG Resources/Music and Sounds/Music.mp3" type="AudioStream" id=2]
 [ext_resource path="res://ButtonNormal.tres" type="StyleBox" id=3]
+[ext_resource path="res://Action RPG Resources/DiscordRPC/MainMenu/MainMenu.tscn" type="PackedScene" id=4]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.517647, 0.517647, 0.517647, 1 )
@@ -59,6 +60,9 @@ custom_styles/hover = ExtResource( 3 )
 custom_styles/pressed = ExtResource( 3 )
 custom_styles/normal = ExtResource( 3 )
 text = "Return"
+
+[node name="Node2D" parent="." instance=ExtResource( 4 )]
+position = Vector2( 40, 152 )
 
 [connection signal="value_changed" from="HSlider" to="." method="_on_HSlider_value_changed"]
 [connection signal="pressed" from="MainMenu" to="." method="_on_MainMenu_pressed"]
