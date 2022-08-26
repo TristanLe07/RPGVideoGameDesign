@@ -16,10 +16,6 @@ func _ready():
 #	pass
 
 
-func _on_BattleSimulationButton_pressed():
-	get_tree().change_scene("res://Battle.tscn")
-
-
 func _on_PlayButton_pressed():
 	get_tree().change_scene("res://World.tscn")
 

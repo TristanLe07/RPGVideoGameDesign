@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Menus/PauseController.gd" type="Script" id=1]
 [ext_resource path="res://ButtonNormal.tres" type="StyleBox" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://MobileUI/right.png" type="Texture" id=6]
 [ext_resource path="res://MobileUI/left.png" type="Texture" id=7]
 [ext_resource path="res://MobileRPG Resources/PixelRPG.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://MobileUI/Interact.png" type="Texture" id=9]
 
 [sub_resource type="DynamicFont" id=3]
 size = 72
@@ -25,8 +26,7 @@ layer = 2
 [node name="MobileControls" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 1.0
-margin_bottom = 2.0
+margin_bottom = 1.0
 
 [node name="Left" type="TouchScreenButton" parent="MobileControls"]
 position = Vector2( 8, 103 )
@@ -69,9 +69,9 @@ action = "MenuPause"
 visibility_mode = 1
 
 [node name="Interaction" type="TouchScreenButton" parent="MobileControls"]
-position = Vector2( 224, 119 )
+position = Vector2( 208, 103 )
 scale = Vector2( 0.1875, 0.1875 )
-normal = ExtResource( 3 )
+normal = ExtResource( 9 )
 passby_press = true
 action = "ui_accept"
 visibility_mode = 1

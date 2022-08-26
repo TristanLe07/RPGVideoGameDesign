@@ -12,16 +12,10 @@ _global_script_classes=[ {
 "base": "Resource",
 "class": "BattleUnits",
 "language": "GDScript",
-"path": "res://BattleUnits.gd"
-}, {
-"base": "Resource",
-"class": "UnitsBattle",
-"language": "GDScript",
-"path": "res://InGameBattle/UnitsBattle.gd"
+"path": "res://Battle/BattleUnits.gd"
 } ]
 _global_script_class_icons={
-"BattleUnits": "",
-"UnitsBattle": ""
+"BattleUnits": ""
 }
 
 [application]
@@ -123,6 +117,17 @@ dialogic_default_action={
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
  ]
 }
+
+[layer_names]
+
+2d_render/layer_1="Player"
+2d_render/layer_2="Building"
+2d_render/layer_3="NPC"
+2d_render/layer_4="Environment"
+2d_physics/layer_1="Building"
+2d_physics/layer_2="Player"
+2d_physics/layer_3="NPC"
+2d_physics/layer_4="Environment"
 
 [physics]
 
