@@ -272,6 +272,7 @@ custom_styles/normal = SubResource( 12 )
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
 autoplay = true
+bus = "Music"
 
 [node name="Node2D" parent="." instance=ExtResource( 10 )]
 

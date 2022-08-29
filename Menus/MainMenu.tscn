@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://MobileRPG Resources/PixelRPG.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Menus/MainMenu.gd" type="Script" id=2]
@@ -32,30 +32,15 @@ corner_detail = 20
 anti_aliasing = false
 anti_aliasing_size = 0.01
 
+[sub_resource type="DynamicFont" id=11]
+size = 12
+font_data = ExtResource( 1 )
+
 [sub_resource type="DynamicFont" id=4]
 size = 12
 font_data = ExtResource( 1 )
 
 [sub_resource type="StyleBoxFlat" id=10]
-bg_color = Color( 0, 0, 0, 1 )
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color( 1, 1, 1, 1 )
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-corner_detail = 20
-anti_aliasing = false
-anti_aliasing_size = 0.01
-
-[sub_resource type="DynamicFont" id=3]
-size = 12
-font_data = ExtResource( 1 )
-
-[sub_resource type="StyleBoxFlat" id=13]
 bg_color = Color( 0, 0, 0, 1 )
 border_width_left = 1
 border_width_top = 1
@@ -114,10 +99,21 @@ custom_styles/pressed = ExtResource( 4 )
 custom_styles/normal = SubResource( 7 )
 text = "PLAY"
 
+[node name="ChangeLogBtn" type="Button" parent="Buttons"]
+margin_left = 88.2344
+margin_top = 120.0
+margin_right = 168.234
+margin_bottom = 144.0
+custom_fonts/font = SubResource( 11 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/normal = SubResource( 7 )
+text = "CHANGES"
+
 [node name="OptionsBtn" type="Button" parent="Buttons"]
 margin_left = 88.2344
 margin_top = 88.0
-margin_right = 168.235
+margin_right = 168.234
 margin_bottom = 112.0
 custom_fonts/font = SubResource( 2 )
 custom_styles/hover = ExtResource( 4 )
@@ -137,21 +133,9 @@ custom_styles/normal = SubResource( 10 )
 text = "I"
 icon_align = 1
 
-[node name="ControlsBtn" type="Button" parent="Buttons"]
-margin_left = 88.2344
-margin_top = 120.0
-margin_right = 168.234
-margin_bottom = 144.0
-custom_fonts/font = SubResource( 3 )
-custom_styles/hover = ExtResource( 4 )
-custom_styles/pressed = ExtResource( 4 )
-custom_styles/normal = SubResource( 13 )
-text = "CONTROLS"
-icon_align = 1
-
 [node name="Node2D" parent="." instance=ExtResource( 6 )]
 
 [connection signal="pressed" from="Buttons/PlayButton" to="." method="_on_PlayButton_pressed"]
+[connection signal="pressed" from="Buttons/ChangeLogBtn" to="." method="_on_ChangeLogBtn_pressed"]
 [connection signal="pressed" from="Buttons/OptionsBtn" to="." method="_on_OptionsBtn_pressed"]
 [connection signal="pressed" from="Buttons/CreditsButton" to="." method="_on_CreditsButton_pressed"]
-[connection signal="pressed" from="Buttons/ControlsBtn" to="." method="_on_ControlsBtn_pressed"]

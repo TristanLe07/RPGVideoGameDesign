@@ -1,7 +1,8 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Action RPG Resources/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Action RPG Resources/Player/Player.png" type="Texture" id=2]
+[ext_resource path="res://Action RPG Resources/UI/light.png" type="Texture" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 2.99999
@@ -311,3 +312,8 @@ parameters/playback = SubResource( 24 )
 parameters/BlendSpace2D/blend_position = Vector2( -0.0054816, -0.0412371 )
 parameters/Idle/blend_position = Vector2( -0.547377, -0.246552 )
 parameters/Walk/blend_position = Vector2( 0, 0 )
+
+[node name="Light2D" type="Light2D" parent="."]
+texture = ExtResource( 3 )
+texture_scale = 0.6
+energy = 0.5

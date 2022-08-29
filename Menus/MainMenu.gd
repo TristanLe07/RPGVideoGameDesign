@@ -30,3 +30,7 @@ func _on_OptionsBtn_pressed():
 
 func _on_ControlsBtn_pressed():
 	get_tree().change_scene("res://Menus/Controls.tscn")
+
+
+func _on_ChangeLogBtn_pressed():
+	get_tree().change_scene("res://Menus/ChangeLog.tscn")

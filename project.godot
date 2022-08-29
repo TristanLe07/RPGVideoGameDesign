@@ -104,12 +104,14 @@ _global_script_class_icons={
 
 [application]
 
-config/name="ARPG"
+config/name="Pokemon: The Game"
 run/main_scene="res://Menus/MainMenu.tscn"
+config/icon="res://Action RPG Resources/UI/logo.png"
+config/windows_native_icon="res://Action RPG Resources/UI/logo.ico"
 
 [audio]
 
-default_bus_layout="res://AudioSettings.tres"
+default_bus_layout="res://Audios/AudioSettings.tres"
 
 [autoload]
 
