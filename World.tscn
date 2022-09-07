@@ -10,7 +10,7 @@
 [ext_resource path="res://Area2D.gd" type="Script" id=8]
 [ext_resource path="res://Action RPG Resources/Player/NPC.tscn" type="PackedScene" id=9]
 [ext_resource path="res://NPCs.gd" type="Script" id=10]
-[ext_resource path="res://Action RPG Resources/DiscordRPC/World/DiscordRPC.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Action RPG Resources/Player/Light2D.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Action RPG Resources/World/Day_Night_Cycle.gd" type="Script" id=12]
 [ext_resource path="res://Action RPG Resources/World/Building.png" type="Texture" id=15]
 [ext_resource path="res://Action RPG Resources/World/PokeCenter.png" type="Texture" id=16]
@@ -807,9 +807,9 @@ limit_right = 1000
 limit_bottom = 1000
 editor_draw_limits = true
 
-[node name="CameraOverlay" parent="." instance=ExtResource( 3 )]
+[node name="Light2D" parent="YSort/Player" instance=ExtResource( 11 )]
 
-[node name="Node2D2" parent="." instance=ExtResource( 11 )]
+[node name="CameraOverlay" parent="." instance=ExtResource( 3 )]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 script = ExtResource( 12 )
