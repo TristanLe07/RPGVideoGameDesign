@@ -2,7 +2,7 @@
 
 [ext_resource path="res://BattleWon.gd" type="Script" id=1]
 [ext_resource path="res://ButtonNormal.tres" type="StyleBox" id=2]
-[ext_resource path="res://Action RPG Resources/DiscordRPC/Battle/Battle.tscn" type="PackedScene" id=3]
+[ext_resource path="res://World.tscn" type="PackedScene" id=3]
 
 [sub_resource type="DynamicFontData" id=3]
 font_path = "res://MobileRPG Resources/PixelRPG.ttf"
