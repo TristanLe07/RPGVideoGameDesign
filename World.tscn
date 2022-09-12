@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://Action RPG Resources/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Action RPG Resources/World/Bush.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://NPCs.gd" type="Script" id=10]
 [ext_resource path="res://Action RPG Resources/Player/Light2D.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Action RPG Resources/World/Day_Night_Cycle.gd" type="Script" id=12]
+[ext_resource path="res://Action RPG Resources/UI/FPS.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Action RPG Resources/World/Building.png" type="Texture" id=15]
 [ext_resource path="res://Action RPG Resources/World/PokeCenter.png" type="Texture" id=16]
 [ext_resource path="res://PokeCenter.gd" type="Script" id=17]
@@ -817,6 +818,8 @@ script = ExtResource( 12 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasModulate"]
 anims/Day_Night_Cycle = SubResource( 23 )
 anims/RESET = SubResource( 24 )
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 13 )]
 
 [connection signal="body_entered" from="NPCs/NPCs" to="NPCs/NPCs" method="_on_NPCs_body_entered"]
 [connection signal="body_exited" from="NPCs/NPCs" to="NPCs/NPCs" method="_on_NPCs_body_exited"]
