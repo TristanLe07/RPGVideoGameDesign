@@ -29,16 +29,13 @@ config/windows_native_icon="res://Action RPG Resources/UI/logo.ico"
 
 default_bus_layout="res://Audios/AudioSettings.tres"
 
-[autoload]
-
-Discord="*res://addons/discord_game_sdk/discord.gd"
-
 [display]
 
 window/size/width=256
 window/size/height=150
 window/size/test_width=1024
 window/size/test_height=600
+window/vsync/use_vsync=false
 window/stretch/mode="viewport"
 window/stretch/aspect="keep"
 
@@ -50,6 +47,7 @@ enabled=PoolStringArray(  )
 
 mouse=false
 dia=false
+fps=false
 
 [gui]
 

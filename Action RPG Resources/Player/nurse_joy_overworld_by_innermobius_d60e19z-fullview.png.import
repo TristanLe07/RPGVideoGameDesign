@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/thumb-1920-613933.jpg-7231a5a0d80add6b160ac78300f1ff75.stex"
+path="res://.import/nurse_joy_overworld_by_innermobius_d60e19z-fullview.png-d157df714c72d38324e54cb31d6e0af3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Action RPG Resources/UI/thumb-1920-613933.jpg"
-dest_files=[ "res://.import/thumb-1920-613933.jpg-7231a5a0d80add6b160ac78300f1ff75.stex" ]
+source_file="res://Action RPG Resources/Player/nurse_joy_overworld_by_innermobius_d60e19z-fullview.png"
+dest_files=[ "res://.import/nurse_joy_overworld_by_innermobius_d60e19z-fullview.png-d157df714c72d38324e54cb31d6e0af3.stex" ]
 
 [params]
 
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

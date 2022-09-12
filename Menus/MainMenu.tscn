@@ -84,8 +84,8 @@ autoplay = true
 bus = "Music"
 
 [node name="Buttons" type="Control" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+margin_right = 257.0
+margin_bottom = 150.0
 
 [node name="PlayButton" type="Button" parent="Buttons"]
 margin_left = 88.2344
