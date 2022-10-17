@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://MobileRPG Resources/PixelRPG.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Menus/MainMenu.gd" type="Script" id=2]
@@ -15,6 +15,10 @@ outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
+[sub_resource type="DynamicFont" id=3]
+size = 12
+font_data = ExtResource( 1 )
+
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0, 0, 0, 1 )
 border_width_left = 1
@@ -29,18 +33,11 @@ corner_radius_bottom_left = 3
 corner_detail = 20
 anti_aliasing = false
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=4]
 size = 12
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFontData" id=7]
-font_path = "res://MobileRPG Resources/PixelRPG.ttf"
-
-[sub_resource type="DynamicFont" id=8]
-size = 6
-font_data = SubResource( 7 )
-
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=6]
 size = 12
 font_data = ExtResource( 1 )
 
@@ -58,9 +55,26 @@ corner_radius_bottom_left = 3
 corner_detail = 20
 anti_aliasing = false
 
-[sub_resource type="DynamicFont" id=6]
-size = 12
-font_data = ExtResource( 1 )
+[sub_resource type="DynamicFontData" id=7]
+font_path = "res://MobileRPG Resources/PixelRPG.ttf"
+
+[sub_resource type="DynamicFont" id=11]
+size = 6
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = SubResource( 7 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 6
+outline_color = Color( 0, 0, 0, 1 )
+font_data = SubResource( 7 )
+
+[sub_resource type="DynamicFontData" id=9]
+font_path = "res://MobileRPG Resources/PixelRPG.ttf"
+
+[sub_resource type="DynamicFont" id=10]
+size = 18
+font_data = SubResource( 9 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -100,77 +114,11 @@ margin_left = 88.2344
 margin_top = 56.0
 margin_right = 168.234
 margin_bottom = 80.0
+custom_fonts/font = SubResource( 3 )
 custom_styles/hover = ExtResource( 4 )
 custom_styles/pressed = ExtResource( 4 )
 custom_styles/normal = SubResource( 2 )
-custom_fonts/font = SubResource( 3 )
 text = "PLAY"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="HostButton" type="Button" parent="Buttons"]
-margin_left = 16.0426
-margin_top = 56.0
-margin_right = 81.0426
-margin_bottom = 80.0
-custom_styles/hover = ExtResource( 4 )
-custom_styles/pressed = ExtResource( 4 )
-custom_styles/normal = SubResource( 2 )
-custom_fonts/font = SubResource( 3 )
-text = "HOST"
-script = ExtResource( 6 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="IP" type="Label" parent="Buttons/HostButton"]
-margin_top = 24.0
-margin_right = 64.0
-margin_bottom = 32.0
-custom_fonts/font = SubResource( 8 )
-text = "IP: [Private IP]"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="JoinButton" type="Button" parent="Buttons"]
-margin_left = 16.0426
-margin_top = 88.0
-margin_right = 81.0426
-margin_bottom = 112.0
-custom_styles/hover = ExtResource( 4 )
-custom_styles/pressed = ExtResource( 4 )
-custom_styles/normal = SubResource( 2 )
-custom_fonts/font = SubResource( 3 )
-text = "JOIN"
-script = ExtResource( 7 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="IP" type="Label" parent="Buttons/JoinButton"]
-margin_top = 24.0
-margin_right = 64.0
-margin_bottom = 32.0
-custom_fonts/font = SubResource( 8 )
-text = "Host's IP address"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="InvalidIP" type="Label" parent="Buttons/JoinButton"]
-margin_top = 32.0
-margin_right = 64.0
-margin_bottom = 40.0
-custom_fonts/font = SubResource( 8 )
-text = "INVALID IP"
-align = 1
-valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -180,10 +128,10 @@ margin_left = 88.2344
 margin_top = 120.0
 margin_right = 168.234
 margin_bottom = 144.0
+custom_fonts/font = SubResource( 4 )
 custom_styles/hover = ExtResource( 4 )
 custom_styles/pressed = ExtResource( 4 )
 custom_styles/normal = SubResource( 2 )
-custom_fonts/font = SubResource( 4 )
 text = "CHANGES"
 
 [node name="OptionsBtn" type="Button" parent="Buttons"]
@@ -191,10 +139,10 @@ margin_left = 88.2344
 margin_top = 88.0
 margin_right = 168.234
 margin_bottom = 112.0
+custom_fonts/font = SubResource( 3 )
 custom_styles/hover = ExtResource( 4 )
 custom_styles/pressed = ExtResource( 4 )
 custom_styles/normal = SubResource( 2 )
-custom_fonts/font = SubResource( 3 )
 text = "OPTIONS"
 
 [node name="CreditsButton" type="Button" parent="Buttons"]
@@ -202,11 +150,69 @@ margin_left = 224.597
 margin_top = 16.0
 margin_right = 240.597
 margin_bottom = 32.0
+custom_fonts/font = SubResource( 6 )
 custom_styles/hover = ExtResource( 4 )
 custom_styles/pressed = ExtResource( 4 )
 custom_styles/normal = SubResource( 5 )
-custom_fonts/font = SubResource( 6 )
 text = "I"
+
+[node name="HostButton" type="Button" parent="Buttons"]
+margin_left = 16.0426
+margin_top = 56.0
+margin_right = 81.0426
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 3 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/normal = SubResource( 2 )
+text = "HOST"
+script = ExtResource( 6 )
+
+[node name="IP" type="Label" parent="Buttons/HostButton"]
+margin_left = -16.0
+margin_top = 24.0
+margin_right = 80.0
+margin_bottom = 32.0
+custom_fonts/font = SubResource( 11 )
+text = "IP: [Private IP]"
+align = 1
+valign = 1
+
+[node name="JoinButton" type="Button" parent="Buttons"]
+margin_left = 16.0426
+margin_top = 88.0
+margin_right = 81.0426
+margin_bottom = 112.0
+custom_fonts/font = SubResource( 3 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/normal = SubResource( 2 )
+text = "JOIN"
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IP" type="LineEdit" parent="Buttons/JoinButton"]
+margin_left = -8.0
+margin_top = 24.0
+margin_right = 72.0
+margin_bottom = 48.0
+custom_fonts/font = SubResource( 8 )
+text = "Host's IP address"
+align = 1
+
+[node name="InvalidIP" type="Label" parent="Buttons/JoinButton"]
+visible = false
+margin_left = 2.47955e-05
+margin_top = 48.0
+margin_right = 64.0
+margin_bottom = 56.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "INVALID IP"
+align = 1
+valign = 1
 
 [node name="Connecting" type="ColorRect" parent="Buttons"]
 visible = false
@@ -221,13 +227,16 @@ __meta__ = {
 [node name="Label" type="Label" parent="Buttons/Connecting"]
 margin_right = 257.0
 margin_bottom = 152.0
+rect_scale = Vector2( 0.997639, 1 )
+custom_fonts/font = SubResource( 10 )
 text = "CONNECTING"
 align = 1
 valign = 1
+
 [connection signal="pressed" from="Buttons/PlayButton" to="." method="_on_PlayButton_pressed"]
-[connection signal="pressed" from="Buttons/HostButton" to="Buttons/HostButton" method="_on_HostButton_pressed"]
-[connection signal="set_connect_type" from="Buttons/HostButton" to="Buttons/Connecting" method="_set_connect_type"]
-[connection signal="pressed" from="Buttons/JoinButton" to="Buttons/JoinButton" method="_on_JoinButton_pressed"]
 [connection signal="pressed" from="Buttons/ChangeLogBtn" to="." method="_on_ChangeLogBtn_pressed"]
 [connection signal="pressed" from="Buttons/OptionsBtn" to="." method="_on_OptionsBtn_pressed"]
 [connection signal="pressed" from="Buttons/CreditsButton" to="." method="_on_CreditsButton_pressed"]
+[connection signal="pressed" from="Buttons/HostButton" to="Buttons/HostButton" method="_on_HostButton_pressed"]
+[connection signal="set_connect_type" from="Buttons/HostButton" to="Buttons/Connecting" method="_set_connect_type"]
+[connection signal="pressed" from="Buttons/JoinButton" to="Buttons/JoinButton" method="_on_JoinButton_pressed"]

@@ -16,7 +16,7 @@ func connected():
 		begin_game()
 
 remote func begin_game():
-	get_tree().change_scene("res://World.tscn")
+	get_tree().change_scene("res://WorldMultiplayer.tscn")
 
 func _on_PlayButton_pressed():
 	get_tree().change_scene("res://World.tscn")

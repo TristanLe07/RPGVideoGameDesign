@@ -25,20 +25,7 @@ hframes = 4
 vframes = 4
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 160, 168 )
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2( 0, -75 )
-current = true
-zoom = Vector2( 1.238, 1.238 )
-limit_left = 0
-limit_top = 0
-limit_right = 317
-limit_bottom = 186
-drag_margin_h_enabled = true
-drag_margin_v_enabled = true
-editor_draw_limits = true
-editor_draw_drag_margin = true
+position = Vector2( 160, 164 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 104, 56 )
@@ -84,6 +71,11 @@ autoplay = true
 bus = "Music"
 
 [node name="CameraOverlay" parent="." instance=ExtResource( 5 )]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 160, 96 )
+current = true
+zoom = Vector2( 1.229, 1.229 )
 
 [connection signal="body_entered" from="LeavePokeCenter" to="LeavePokeCenter" method="_on_LeavePokeCenter_body_entered"]
 [connection signal="body_exited" from="LeavePokeCenter" to="LeavePokeCenter" method="_on_LeavePokeCenter_body_exited"]
