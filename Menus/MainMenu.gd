@@ -8,13 +8,15 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	get_tree().connect("connected_to_server", self, "connected")
+	
+func connected():
+	if not Net.is_host:
+		rpc("begin_game")
+		begin_game()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
+remote func begin_game():
+	get_tree().change_scene("res://World.tscn")
 
 func _on_PlayButton_pressed():
 	get_tree().change_scene("res://World.tscn")

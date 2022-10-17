@@ -1,10 +1,13 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://MobileRPG Resources/PixelRPG.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Menus/MainMenu.gd" type="Script" id=2]
 [ext_resource path="res://Action RPG Resources/UI/thumb-1920-613933.jpg" type="Texture" id=3]
 [ext_resource path="res://ButtonNormal.tres" type="StyleBox" id=4]
 [ext_resource path="res://Audios/MainMenuMusic.wav" type="AudioStream" id=5]
+[ext_resource path="res://Networking/HostButton.gd" type="Script" id=6]
+[ext_resource path="res://Networking/JoinButton.gd" type="Script" id=7]
+[ext_resource path="res://Networking/Connecting.gd" type="Script" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 24
@@ -12,11 +15,7 @@ outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=2]
-size = 12
-font_data = ExtResource( 1 )
-
-[sub_resource type="StyleBoxFlat" id=7]
+[sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0, 0, 0, 1 )
 border_width_left = 1
 border_width_top = 1
@@ -29,17 +28,23 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 20
 anti_aliasing = false
-anti_aliasing_size = 0.01
 
-[sub_resource type="DynamicFont" id=11]
+[sub_resource type="DynamicFont" id=3]
 size = 12
 font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFontData" id=7]
+font_path = "res://MobileRPG Resources/PixelRPG.ttf"
+
+[sub_resource type="DynamicFont" id=8]
+size = 6
+font_data = SubResource( 7 )
 
 [sub_resource type="DynamicFont" id=4]
 size = 12
 font_data = ExtResource( 1 )
 
-[sub_resource type="StyleBoxFlat" id=10]
+[sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0, 0, 0, 1 )
 border_width_left = 1
 border_width_top = 1
@@ -52,7 +57,10 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 20
 anti_aliasing = false
-anti_aliasing_size = 0.01
+
+[sub_resource type="DynamicFont" id=6]
+size = 12
+font_data = ExtResource( 1 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -92,21 +100,90 @@ margin_left = 88.2344
 margin_top = 56.0
 margin_right = 168.234
 margin_bottom = 80.0
-custom_fonts/font = SubResource( 2 )
 custom_styles/hover = ExtResource( 4 )
 custom_styles/pressed = ExtResource( 4 )
-custom_styles/normal = SubResource( 7 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "PLAY"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HostButton" type="Button" parent="Buttons"]
+margin_left = 16.0426
+margin_top = 56.0
+margin_right = 81.0426
+margin_bottom = 80.0
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
+text = "HOST"
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IP" type="Label" parent="Buttons/HostButton"]
+margin_top = 24.0
+margin_right = 64.0
+margin_bottom = 32.0
+custom_fonts/font = SubResource( 8 )
+text = "IP: [Private IP]"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="JoinButton" type="Button" parent="Buttons"]
+margin_left = 16.0426
+margin_top = 88.0
+margin_right = 81.0426
+margin_bottom = 112.0
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
+text = "JOIN"
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IP" type="Label" parent="Buttons/JoinButton"]
+margin_top = 24.0
+margin_right = 64.0
+margin_bottom = 32.0
+custom_fonts/font = SubResource( 8 )
+text = "Host's IP address"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InvalidIP" type="Label" parent="Buttons/JoinButton"]
+margin_top = 32.0
+margin_right = 64.0
+margin_bottom = 40.0
+custom_fonts/font = SubResource( 8 )
+text = "INVALID IP"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="ChangeLogBtn" type="Button" parent="Buttons"]
 margin_left = 88.2344
 margin_top = 120.0
 margin_right = 168.234
 margin_bottom = 144.0
-custom_fonts/font = SubResource( 11 )
 custom_styles/hover = ExtResource( 4 )
 custom_styles/pressed = ExtResource( 4 )
-custom_styles/normal = SubResource( 7 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = SubResource( 4 )
 text = "CHANGES"
 
 [node name="OptionsBtn" type="Button" parent="Buttons"]
@@ -114,10 +191,10 @@ margin_left = 88.2344
 margin_top = 88.0
 margin_right = 168.234
 margin_bottom = 112.0
-custom_fonts/font = SubResource( 2 )
 custom_styles/hover = ExtResource( 4 )
 custom_styles/pressed = ExtResource( 4 )
-custom_styles/normal = SubResource( 7 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "OPTIONS"
 
 [node name="CreditsButton" type="Button" parent="Buttons"]
@@ -125,14 +202,32 @@ margin_left = 224.597
 margin_top = 16.0
 margin_right = 240.597
 margin_bottom = 32.0
-custom_fonts/font = SubResource( 4 )
 custom_styles/hover = ExtResource( 4 )
 custom_styles/pressed = ExtResource( 4 )
-custom_styles/normal = SubResource( 10 )
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
 text = "I"
-icon_align = 1
 
+[node name="Connecting" type="ColorRect" parent="Buttons"]
+visible = false
+margin_right = 257.0
+margin_bottom = 152.0
+color = Color( 0, 0, 0, 1 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Buttons/Connecting"]
+margin_right = 257.0
+margin_bottom = 152.0
+text = "CONNECTING"
+align = 1
+valign = 1
 [connection signal="pressed" from="Buttons/PlayButton" to="." method="_on_PlayButton_pressed"]
+[connection signal="pressed" from="Buttons/HostButton" to="Buttons/HostButton" method="_on_HostButton_pressed"]
+[connection signal="set_connect_type" from="Buttons/HostButton" to="Buttons/Connecting" method="_set_connect_type"]
+[connection signal="pressed" from="Buttons/JoinButton" to="Buttons/JoinButton" method="_on_JoinButton_pressed"]
 [connection signal="pressed" from="Buttons/ChangeLogBtn" to="." method="_on_ChangeLogBtn_pressed"]
 [connection signal="pressed" from="Buttons/OptionsBtn" to="." method="_on_OptionsBtn_pressed"]
 [connection signal="pressed" from="Buttons/CreditsButton" to="." method="_on_CreditsButton_pressed"]
