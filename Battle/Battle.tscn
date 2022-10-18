@@ -165,8 +165,8 @@ margin_bottom = 150.0
 color = Color( 0.313726, 1, 0, 1 )
 
 [node name="BattleBackground" type="Sprite" parent="ColorBackground"]
-position = Vector2( 128, 76 )
-scale = Vector2( 1.06667, 1.35714 )
+position = Vector2( 128, 75.0001 )
+scale = Vector2( 1.06667, 1.33928 )
 texture = ExtResource( 10 )
 
 [node name="PlayerStats" type="Node" parent="."]
@@ -174,9 +174,9 @@ script = ExtResource( 4 )
 
 [node name="Panel" type="Panel" parent="."]
 margin_left = 152.0
-margin_top = 120.0
+margin_top = 112.0
 margin_right = 232.0
-margin_bottom = 152.0
+margin_bottom = 144.0
 custom_styles/panel = SubResource( 5 )
 
 [node name="Enemy" parent="." instance=ExtResource( 1 )]
@@ -193,9 +193,9 @@ margin_bottom = 24.0
 
 [node name="Panel" type="Panel" parent="Ui"]
 margin_left = 8.0
-margin_top = 104.0
+margin_top = 112.0
 margin_right = 96.0
-margin_bottom = 141.0
+margin_bottom = 149.0
 custom_styles/panel = SubResource( 1 )
 
 [node name="StatsPanel" type="Panel" parent="Ui"]
@@ -250,9 +250,9 @@ valign = 1
 [node name="GridContainer" type="GridContainer" parent="Ui"]
 anchor_right = 0.529
 margin_left = 16.0
-margin_top = 112.0
+margin_top = 120.0
 margin_right = 75.304
-margin_bottom = 136.0
+margin_bottom = 144.0
 custom_constants/vseparation = 11
 custom_constants/hseparation = 12
 columns = 2

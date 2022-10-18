@@ -120,16 +120,13 @@ texture = ExtResource( 3 )
 
 [node name="hpLabel" type="Label" parent="."]
 margin_left = -32.0
-margin_top = 40.0
+margin_top = 32.0
 margin_right = 32.0
-margin_bottom = 104.0
+margin_bottom = 96.0
 custom_fonts/font = SubResource( 1 )
 text = "75hp"
 align = 1
 valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 playback_speed = 0.5

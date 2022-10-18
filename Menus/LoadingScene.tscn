@@ -3,17 +3,6 @@
 [ext_resource path="res://PixelFont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Menus/LoadingScreen.gd" type="Script" id=2]
 
-[sub_resource type="DynamicFontData" id=9]
-font_path = "res://MobileRPG Resources/PixelRPG.ttf"
-
-[sub_resource type="DynamicFont" id=10]
-size = 18
-font_data = SubResource( 9 )
-
-[sub_resource type="DynamicFont" id=11]
-size = 6
-font_data = SubResource( 9 )
-
 [sub_resource type="StyleBoxFlat" id=12]
 bg_color = Color( 0, 0, 0, 1 )
 
@@ -23,7 +12,18 @@ bg_color = Color( 0, 0, 0, 1 )
 [sub_resource type="StyleBoxFlat" id=14]
 bg_color = Color( 0, 0, 0, 1 )
 
+[sub_resource type="DynamicFontData" id=9]
+font_path = "res://MobileRPG Resources/PixelRPG.ttf"
+
 [sub_resource type="DynamicFont" id=15]
+size = 6
+font_data = SubResource( 9 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 18
+font_data = SubResource( 9 )
+
+[sub_resource type="DynamicFont" id=11]
 size = 6
 font_data = SubResource( 9 )
 
@@ -36,32 +36,6 @@ script = ExtResource( 2 )
 margin_right = 256.0
 margin_bottom = 150.0
 color = Color( 0, 0, 0, 1 )
-
-[node name="Label" type="Label" parent="."]
-margin_top = 8.0
-margin_right = 256.0
-margin_bottom = 48.0
-custom_fonts/font = SubResource( 10 )
-text = "Pokemon:
-The Game"
-align = 1
-valign = 1
-autowrap = true
-
-[node name="Label2" type="Label" parent="."]
-margin_left = 1.0
-margin_top = 47.0
-margin_right = 257.0
-margin_bottom = 149.0
-custom_fonts/font = SubResource( 11 )
-text = "Welcome! Here are some recently added features:
-+ Localhost Multiplayer has been added. (This is extremely buggy and I do not recommend)
-+ This scene was added
-+ Starting to clean up project
-
-Please Note:
-This is a fan game developed by Tristan Le for a school project. "
-autowrap = true
 
 [node name="Button" type="Button" parent="."]
 margin_right = 256.0
@@ -81,5 +55,31 @@ custom_fonts/font = SubResource( 15 )
 text = "Click to anywhere continue"
 align = 1
 valign = 1
+
+[node name="Label" type="Label" parent="."]
+margin_top = 8.0
+margin_right = 256.0
+margin_bottom = 48.0
+custom_fonts/font = SubResource( 10 )
+text = "Pokemon:
+The Game"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 8.0
+margin_top = 47.0
+margin_right = 248.0
+margin_bottom = 149.0
+custom_fonts/font = SubResource( 11 )
+text = "Welcome! Here are some recently added features:
++ Localhost Multiplayer has been added. (This is extremely buggy and I do not recommend)
++ This scene was added
++ Starting to clean up project
+
+Please Note:
+This is a fan game developed by Tristan Le for a school project. "
+autowrap = true
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

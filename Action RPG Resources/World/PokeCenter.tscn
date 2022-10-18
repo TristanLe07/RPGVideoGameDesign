@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Action RPG Resources/World/InsidePokecenter.png" type="Texture" id=1]
 [ext_resource path="res://Action RPG Resources/Player/Player.tscn" type="PackedScene" id=2]
@@ -6,11 +6,13 @@
 [ext_resource path="res://Audios/PokeCenterMusic.wav" type="AudioStream" id=4]
 [ext_resource path="res://CameraOverlay.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Action RPG Resources/Player/nurse_joy_overworld_by_innermobius_d60e19z-fullview.png" type="Texture" id=6]
+[ext_resource path="res://Networking/PokeCenterMultiplayer.gd" type="Script" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16, 9 )
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 7 )
 
 [node name="InsidePokecenter" type="Sprite" parent="."]
 position = Vector2( 160, 95.9999 )
