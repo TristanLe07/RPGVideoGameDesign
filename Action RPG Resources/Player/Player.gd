@@ -4,7 +4,6 @@ const ACCELERATION = 500
 const MAX_SPEED = 80
 const FRICTION = 500
 
-var is_master = false
 var state = MOVE
 var velocity = Vector2.ZERO
 
@@ -17,18 +16,11 @@ enum {
 	ROLL
 }
 
-func initialized(id):
-	name = str(id)
-	if id == Net.net_id:
-		is_master = true
-	else:
-		modulate = Color8(255, 0, 0, 255)
-
 
 func _physics_process(delta):
-	match state:
-		MOVE:
-			move_state(delta)
+		match state:
+			MOVE:
+				move_state(delta)
 	
 	
 	
@@ -48,9 +40,4 @@ func move_state(delta):
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 		
 	velocity = move_and_slide(velocity)
-	rpc_unreliable("update_position", position)
-	
-remote func update_position(pos):
-	position = pos
-
 

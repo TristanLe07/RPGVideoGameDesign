@@ -14,4 +14,4 @@ func _on_LeavePokeCenter_body_exited(_body):
 func _process(_delta):
 	if entered == true:
 		if Input.is_action_just_pressed("ui_accept"):
-			get_tree().change_scene("res://World.tscn")
+			get_tree().change_scene("res://WorldMultiplayer.tscn")

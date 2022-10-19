@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Battle/Enemy.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Audios/Thunderbolt Sound Effect - Pikachu (Pokémon).wav" type="AudioStream" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Battle/StatsPanel.gd" type="Script" id=7]
 [ext_resource path="res://Battle/AttackButton.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Audios/BattleMusic.wav" type="AudioStream" id=9]
+[ext_resource path="res://Action RPG Resources/UI/BattleBackground.png" type="Texture" id=10]
 
 [sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0, 0, 0, 1 )
@@ -163,21 +164,28 @@ margin_right = 256.0
 margin_bottom = 150.0
 color = Color( 0.313726, 1, 0, 1 )
 
+[node name="BattleBackground" type="Sprite" parent="ColorBackground"]
+position = Vector2( 128, 75.0001 )
+scale = Vector2( 1.06667, 1.33928 )
+texture = ExtResource( 10 )
+
 [node name="PlayerStats" type="Node" parent="."]
 script = ExtResource( 4 )
 
 [node name="Panel" type="Panel" parent="."]
 margin_left = 152.0
-margin_top = 104.0
+margin_top = 112.0
 margin_right = 232.0
-margin_bottom = 136.0
+margin_bottom = 144.0
 custom_styles/panel = SubResource( 5 )
 
 [node name="Enemy" parent="." instance=ExtResource( 1 )]
-position = Vector2( 192, 48 )
+position = Vector2( 192, 64 )
 
 [node name="PikachuAttack" type="AudioStreamPlayer" parent="Enemy"]
 stream = ExtResource( 2 )
+volume_db = -7.06
+bus = "Music"
 
 [node name="Ui" type="Control" parent="."]
 margin_right = 24.0
@@ -185,9 +193,9 @@ margin_bottom = 24.0
 
 [node name="Panel" type="Panel" parent="Ui"]
 margin_left = 8.0
-margin_top = 104.0
+margin_top = 112.0
 margin_right = 96.0
-margin_bottom = 141.0
+margin_bottom = 149.0
 custom_styles/panel = SubResource( 1 )
 
 [node name="StatsPanel" type="Panel" parent="Ui"]
@@ -242,9 +250,9 @@ valign = 1
 [node name="GridContainer" type="GridContainer" parent="Ui"]
 anchor_right = 0.529
 margin_left = 16.0
-margin_top = 112.0
+margin_top = 120.0
 margin_right = 75.304
-margin_bottom = 136.0
+margin_bottom = 144.0
 custom_constants/vseparation = 11
 custom_constants/hseparation = 12
 columns = 2

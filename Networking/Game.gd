@@ -10,6 +10,6 @@ func create_players():
 	create_player(Net.net_id)
 	
 func create_player(id):
-	var p = preload("res://Action RPG Resources/Player/Player.tscn").instance()
+	var p = preload("res://Action RPG Resources/Player/PlayerMultiplayer.tscn").instance()
 	add_child(p)
 	p.initialized(id)

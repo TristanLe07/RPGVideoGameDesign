@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Action RPG Resources/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Action RPG Resources/World/Bush.tscn" type="PackedScene" id=2]
@@ -10,10 +10,8 @@
 [ext_resource path="res://Area2D.gd" type="Script" id=8]
 [ext_resource path="res://Action RPG Resources/Player/NPC.tscn" type="PackedScene" id=9]
 [ext_resource path="res://NPCs.gd" type="Script" id=10]
-[ext_resource path="res://Action RPG Resources/Player/Light2D.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Action RPG Resources/World/Day_Night_Cycle.gd" type="Script" id=12]
 [ext_resource path="res://Action RPG Resources/UI/FPS.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Networking/Game.gd" type="Script" id=14]
 [ext_resource path="res://Action RPG Resources/World/Building.png" type="Texture" id=15]
 [ext_resource path="res://Action RPG Resources/World/PokeCenter.png" type="Texture" id=16]
 [ext_resource path="res://PokeCenter.gd" type="Script" id=17]
@@ -40,6 +38,11 @@ points = PoolVector2Array( 0, 20, 80, 20, 80, 92, 72, 92, 72, 100, 36, 100, 36, 
 0/autotile/z_index_map = [  ]
 0/occluder_offset = Vector2( 0, 0 )
 0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -70,6 +73,11 @@ points = PoolVector2Array( 2, 100, 0, 100, 0, 40, 10, 14, 28, 4, 36, 2, 60, 2, 7
 0/autotile/z_index_map = [  ]
 0/occluder_offset = Vector2( 0, 0 )
 0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 3 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -100,6 +108,11 @@ points = PoolVector2Array( 2, 96, 2, 68, 0, 68, 0, 16, 80, 16, 80, 68, 78, 68, 7
 0/autotile/z_index_map = [  ]
 0/occluder_offset = Vector2( 0, 0 )
 0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 5 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -129,6 +142,10 @@ points = PoolVector2Array( 2, 96, 2, 68, 0, 68, 0, 16, 80, 16, 80, 68, 78, 68, 7
 0/autotile/z_index_map = [  ]
 0/occluder_offset = Vector2( 0, 0 )
 0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
 0/shapes = [  ]
 0/z_index = 0
 
@@ -156,6 +173,11 @@ points = PoolVector2Array( 6, 14, 8, 14, 34, 0, 42, 0, 60, 10, 62, 10, 70, 10, 7
 0/autotile/z_index_map = [  ]
 0/occluder_offset = Vector2( 0, 0 )
 0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 10 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -206,7 +228,6 @@ tracks/0/keys = {
 }
 
 [node name="World" type="Node2D"]
-script = ExtResource( 14 )
 
 [node name="GrassFloor" type="Sprite" parent="."]
 position = Vector2( 0, 8 )
@@ -1253,24 +1274,14 @@ position = Vector2( 235, -36 )
 shape = SubResource( 13 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 276, -51 )
-collision_layer = 2
-collision_mask = 13
+position = Vector2( 276, -57 )
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player"]
 current = true
-limit_left = -1000
-limit_top = -1000
-limit_right = 1000
-limit_bottom = 1000
-editor_draw_limits = true
-
-[node name="Light2D" parent="YSort/Player" instance=ExtResource( 11 )]
 
 [node name="CameraOverlay" parent="." instance=ExtResource( 3 )]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color( 0.121569, 0.133333, 0.2, 1 )
 script = ExtResource( 12 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasModulate"]
@@ -1278,6 +1289,7 @@ anims/Day_Night_Cycle = SubResource( 14 )
 anims/RESET = SubResource( 15 )
 
 [node name="CanvasLayer" parent="." instance=ExtResource( 13 )]
+
 [connection signal="body_entered" from="NPCs/NPCs" to="NPCs/NPCs" method="_on_NPCs_body_entered"]
 [connection signal="body_exited" from="NPCs/NPCs" to="NPCs/NPCs" method="_on_NPCs_body_exited"]
 [connection signal="body_entered" from="NPCs/NPCs2" to="NPCs/NPCs2" method="_on_NPCs_body_entered"]

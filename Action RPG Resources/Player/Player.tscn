@@ -281,8 +281,8 @@ script = ExtResource( 1 )
 position = Vector2( -2.20229e-23, -7 )
 scale = Vector2( 0.625, 0.625 )
 texture = ExtResource( 2 )
-vframes = 4
 hframes = 4
+vframes = 4
 frame = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
