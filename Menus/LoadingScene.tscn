@@ -3,29 +3,29 @@
 [ext_resource path="res://PixelFont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Menus/LoadingScreen.gd" type="Script" id=2]
 
-[sub_resource type="StyleBoxFlat" id=12]
+[sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 1 )
 
-[sub_resource type="StyleBoxFlat" id=13]
+[sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0, 0, 0, 1 )
 
-[sub_resource type="StyleBoxFlat" id=14]
+[sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0, 0, 0, 1 )
 
-[sub_resource type="DynamicFontData" id=9]
+[sub_resource type="DynamicFontData" id=4]
 font_path = "res://MobileRPG Resources/PixelRPG.ttf"
 
-[sub_resource type="DynamicFont" id=15]
+[sub_resource type="DynamicFont" id=5]
 size = 6
-font_data = SubResource( 9 )
+font_data = SubResource( 4 )
 
-[sub_resource type="DynamicFont" id=10]
+[sub_resource type="DynamicFont" id=6]
 size = 18
-font_data = SubResource( 9 )
+font_data = SubResource( 4 )
 
-[sub_resource type="DynamicFont" id=11]
+[sub_resource type="DynamicFont" id=7]
 size = 6
-font_data = SubResource( 9 )
+font_data = SubResource( 4 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -40,10 +40,10 @@ color = Color( 0, 0, 0, 1 )
 [node name="Button" type="Button" parent="."]
 margin_right = 256.0
 margin_bottom = 149.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
 custom_fonts/font = ExtResource( 1 )
-custom_styles/hover = SubResource( 12 )
-custom_styles/pressed = SubResource( 13 )
-custom_styles/normal = SubResource( 14 )
 flat = true
 
 [node name="Label" type="Label" parent="Button"]
@@ -51,7 +51,7 @@ margin_left = 16.0
 margin_top = 128.0
 margin_right = 240.0
 margin_bottom = 150.0
-custom_fonts/font = SubResource( 15 )
+custom_fonts/font = SubResource( 5 )
 text = "Click to anywhere continue"
 align = 1
 valign = 1
@@ -60,7 +60,7 @@ valign = 1
 margin_top = 8.0
 margin_right = 256.0
 margin_bottom = 48.0
-custom_fonts/font = SubResource( 10 )
+custom_fonts/font = SubResource( 6 )
 text = "Pokemon:
 The Game"
 align = 1
@@ -72,7 +72,7 @@ margin_left = 8.0
 margin_top = 47.0
 margin_right = 248.0
 margin_bottom = 149.0
-custom_fonts/font = SubResource( 11 )
+custom_fonts/font = SubResource( 7 )
 text = "Welcome! Here are some recently added features:
 + Localhost Multiplayer has been added. (This is extremely buggy and I do not recommend)
 + This scene was added
@@ -81,5 +81,4 @@ text = "Welcome! Here are some recently added features:
 Please Note:
 This is a fan game developed by Tristan Le for a school project. "
 autowrap = true
-
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
