@@ -6,6 +6,7 @@
 height = 3.99999
 
 [node name="Bush" type="StaticBody2D"]
+collision_layer = 8
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )

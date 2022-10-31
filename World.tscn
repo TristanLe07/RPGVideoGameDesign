@@ -1,6 +1,5 @@
 [gd_scene load_steps=32 format=2]
 
-[ext_resource path="res://Action RPG Resources/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Action RPG Resources/World/Bush.tscn" type="PackedScene" id=2]
 [ext_resource path="res://CameraOverlay.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Action RPG Resources/World/DirtPath.tres" type="TileSet" id=4]
@@ -10,6 +9,7 @@
 [ext_resource path="res://Area2D.gd" type="Script" id=8]
 [ext_resource path="res://Action RPG Resources/Player/NPC.tscn" type="PackedScene" id=9]
 [ext_resource path="res://NPCs.gd" type="Script" id=10]
+[ext_resource path="res://Action RPG Resources/Player/player 2 version/Player.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Action RPG Resources/World/Day_Night_Cycle.gd" type="Script" id=12]
 [ext_resource path="res://Action RPG Resources/UI/FPS.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Action RPG Resources/World/Building.png" type="Texture" id=15]
@@ -1180,6 +1180,7 @@ position = Vector2( -816, -200 )
 
 [node name="Tree11" parent="YSort/Tree" instance=ExtResource( 6 )]
 position = Vector2( -816, -64 )
+collision_mask = 0
 
 [node name="Tree12" parent="YSort/Tree" instance=ExtResource( 6 )]
 position = Vector2( -368, -64 )
@@ -1242,18 +1243,15 @@ polygon = PoolVector2Array( 302.938, -275.677, -302.938, -275.677, -393, -185.15
 [node name="EnterPokeCenter" type="Area2D" parent="YSort/PokeCenter"]
 position = Vector2( -2030.5, 592.5 )
 scale = Vector2( 8.1875, 8.22917 )
-collision_mask = 2
+collision_layer = 2
 script = ExtResource( 17 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/PokeCenter/EnterPokeCenter"]
 position = Vector2( 235, -36 )
 shape = SubResource( 13 )
 
-[node name="Player" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 276, -57 )
-
-[node name="Camera2D" type="Camera2D" parent="YSort/Player"]
-current = true
+[node name="Player2" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( 0, -8.04488 )
 
 [node name="CameraOverlay" parent="." instance=ExtResource( 3 )]
 

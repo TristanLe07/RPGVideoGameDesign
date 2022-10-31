@@ -32,6 +32,7 @@ default_bus_layout="res://Audios/AudioSettings.tres"
 [autoload]
 
 Net="*res://Networking/Network.gd"
+Utils="*res://Autoload/utils.gd"
 
 [display]
 
@@ -40,7 +41,7 @@ window/size/height=150
 window/size/test_width=1024
 window/size/test_height=600
 window/vsync/use_vsync=false
-window/stretch/mode="viewport"
+window/stretch/mode="2d"
 window/stretch/aspect="keep"
 
 [editor_plugins]
@@ -129,9 +130,9 @@ dialogic_default_action={
 [layer_names]
 
 2d_render/layer_1="Player"
-2d_physics/layer_1="Building"
+2d_physics/layer_1="Player"
 2d_render/layer_2="Building"
-2d_physics/layer_2="Player"
+2d_physics/layer_2="Building"
 2d_render/layer_3="NPC"
 2d_physics/layer_3="NPC"
 2d_render/layer_4="Environment"

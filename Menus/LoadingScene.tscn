@@ -31,6 +31,9 @@ font_data = SubResource( 4 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 256.0
@@ -45,6 +48,9 @@ custom_styles/pressed = SubResource( 2 )
 custom_styles/normal = SubResource( 3 )
 custom_fonts/font = ExtResource( 1 )
 flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label" type="Label" parent="Button"]
 margin_left = 16.0
@@ -68,10 +74,10 @@ valign = 1
 autowrap = true
 
 [node name="Label2" type="Label" parent="."]
-margin_left = 8.0
-margin_top = 47.0
-margin_right = 248.0
-margin_bottom = 149.0
+margin_left = 7.44522
+margin_top = 47.5548
+margin_right = 247.445
+margin_bottom = 149.555
 custom_fonts/font = SubResource( 7 )
 text = "Welcome! Here are some recently added features:
 + Localhost Multiplayer has been added. (This is extremely buggy and I do not recommend)
@@ -81,4 +87,7 @@ text = "Welcome! Here are some recently added features:
 Please Note:
 This is a fan game developed by Tristan Le for a school project. "
 autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
